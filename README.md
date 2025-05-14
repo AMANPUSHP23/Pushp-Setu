@@ -1,7 +1,4 @@
-<!-- Futuristic Banner -->
-<p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Orbitron&size=28&pause=1000&color=00F7FF&center=true&vCenter=true&width=800&lines=🏠+PUSHP+SETU+;The+Future+of+Smart+House+Management" alt="Typing SVG" />
-</p>
+
 
  <p align="center">
   <img src="./public/assets/pushp setu banner.png" alt="pushp-setu" />
@@ -106,4 +103,3 @@ Aman Pushp
 [**Aman Pushp**](https://github.com/AMANPUSHP23)
 📫 amanpushp2001@gmail.com
 
-<p align="center"> <img src="https://readme-typing-svg.demolab.com?font=Orbitron&size=20&pause=1000&color=00F7FF&center=true&vCenter=true&width=700&lines=Smart+Homes+Start+Here+🚪;PUSHP+SETU+by+Aman+Pushp" alt="Typing SVG" /> </p> ```
