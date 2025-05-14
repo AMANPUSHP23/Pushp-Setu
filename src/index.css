@@ -1,0 +1,143 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%; /* Light mode background */
+    --foreground: 224 71.4% 4.1%; /* Light mode text */
+
+    --card: 0 0% 100%; /* Light mode card background */
+    --card-foreground: 224 71.4% 4.1%; /* Light mode card text */
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 224 71.4% 4.1%;
+
+    --primary: 262.1 83.3% 57.8%; /* Vibrant Purple - Primary Accent */
+    --primary-foreground: 355.7 100% 97.3%; /* Text on primary */
+
+    --secondary: 220 14.3% 95.9%; /* Light gray - secondary background elements */
+    --secondary-foreground: 220.9 39.3% 11%; /* Text on secondary */
+
+    --muted: 220 14.3% 95.9%; /* Muted elements */
+    --muted-foreground: 220 8.9% 46.1%; /* Muted text */
+
+    --accent: 30 94.6% 58.2%; /* Bright Orange - Secondary Accent */
+    --accent-foreground: 30 8.9% 16.1%; /* Text on accent */
+
+    --destructive: 0 84.2% 60.2%; /* Destructive actions */
+    --destructive-foreground: 355.7 100% 97.3%;
+
+    --border: 220 13% 91%; /* Borders */
+    --input: 220 13% 85%; /* Input borders */
+    --ring: 262.1 83.3% 57.8%; /* Focus rings */
+
+    --radius: 0.75rem; /* Default border radius */
+
+    --futuristic-glow-primary: 0 0 15px hsla(var(--primary), 0.5);
+    --futuristic-glow-accent: 0 0 15px hsla(var(--accent), 0.5);
+  }
+
+  .dark {
+    --background: 224 10% 10%; /* Dark mode background - very dark blue/gray */
+    --foreground: 210 20% 96%; /* Dark mode text - light gray/off-white */
+
+    --card: 224 10% 13%; /* Dark mode card background - slightly lighter than main bg */
+    --card-foreground: 210 20% 96%; /* Dark mode card text */
+
+    --popover: 224 10% 10%;
+    --popover-foreground: 210 20% 96%;
+
+    --primary: 263.4 90.2% 62.2%; /* Dark Mode Purple - slightly brighter */
+    --primary-foreground: 210 20% 98%;
+
+    --secondary: 215 15% 20%; /* Dark gray - secondary background elements */
+    --secondary-foreground: 210 20% 90%;
+
+    --muted: 215 15% 20%;
+    --muted-foreground: 217.9 10.6% 64.9%;
+
+    --accent: 30 90% 60%; /* Dark Mode Orange - slightly brighter */
+    --accent-foreground: 20 8.9% 16.1%;
+
+    --destructive: 0 70% 50%; /* Dark mode destructive */
+    --destructive-foreground: 210 20% 98%;
+
+    --border: 215 15% 25%; /* Dark mode borders */
+    --input: 215 15% 28%; /* Dark mode input borders */
+    --ring: 263.4 90.2% 62.2%;
+    
+    --futuristic-glow-primary: 0 0 20px hsla(var(--primary), 0.7);
+    --futuristic-glow-accent: 0 0 20px hsla(var(--accent), 0.7);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+.gradient-text {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent;
+}
+
+.futuristic-glow-primary {
+  box-shadow: var(--futuristic-glow-primary);
+}
+
+.futuristic-glow-accent {
+  box-shadow: var(--futuristic-glow-accent);
+}
+
+
+/* Custom scrollbar for a more futuristic feel */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  @apply bg-secondary/30 dark:bg-slate-800/50;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-muted-foreground/50 dark:bg-slate-600/50;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-muted-foreground/70 dark:bg-slate-500/70;
+}
+
+/* Animation for slower spin if needed */
+.animate-spin-slow {
+  animation: spin 2s linear infinite;
+}
+
+/* Glassmorphism effect */
+.glassmorphic {
+  @apply bg-card/70 dark:bg-slate-900/70 backdrop-blur-lg border border-border/50 dark:border-slate-800/50;
+}
+
+/* Holographic text effect */
+.holographic-text {
+  background-image: linear-gradient(45deg, hsl(var(--primary) / 0.6), hsl(var(--accent) / 0.6), hsl(var(--primary) / 0.6));
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: holographic-shine 5s linear infinite;
+}
+
+@keyframes holographic-shine {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+  
